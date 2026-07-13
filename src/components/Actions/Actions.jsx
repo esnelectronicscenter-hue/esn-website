@@ -1,12 +1,20 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Actions.css';
 
 function Actions() {
   const [cartCount, setCartCount] = useState(0);
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    // تبديل اللغة فقط بدون تغيير اتجاه الصفحة
+    const newLang = i18n.language.startsWith('ar') ? 'en' : 'ar';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <div className="actions-block">
-      <button className="icon-btn">
+      <button className="icon-btn" onClick={toggleLanguage} aria-label="تغيير اللغة">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
           <line x1="2" y1="12" x2="22" y2="12"></line>

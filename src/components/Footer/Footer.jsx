@@ -37,7 +37,7 @@ function Footer() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d804.8256479857405!2d37.15297493036902!3d36.20783948038642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ff86a29531181%3A0x22c9221f96675274!2z2K3ZhNmI2YrYp9iqINin2YTZhdit2KfZitix2Yo!5e0!3m2!1sar!2str!4v1783866785497!5m2!1sar!2str" 
                 width="100%" 
                 height="200" 
-                style={{ border: 0, borderRadius: '12px' }} 
+                style={{ border: 0, borderRadius: '12px', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',border: '1px solid rgba(255, 255, 255, 0.2)' }} 
                 allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="strict-origin-when-cross-origin">

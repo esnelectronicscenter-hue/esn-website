@@ -7,10 +7,10 @@
 
 .spark-line {
   position: absolute;
-  width: 2px;
+  width: 1px;
   height: 12px;
   border-radius: 2px;
-  background-color: #af2025; /* لون الشرر مطابق للون الموقع */
+  background-color: #ffffff; /* لون الشرر مطابق للون الموقع */
   opacity: 0;
   transform-origin: center top;
   animation: spark-explode 0.5s ease-out forwards;
