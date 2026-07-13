@@ -10,11 +10,27 @@
 }
 
 .footer-brands-wrapper {
-  padding: 30px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0.8;
+  padding: 30px 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0.5;
   overflow: hidden;
-  direction: ltr; 
+  direction: ltr;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 50%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 50%, black 90%, transparent);
+}
+
+/* 👈 كود لإخفاء الدوائر (النقاط) الخاصة بالقوائم داخل شريط الماركات */
+.footer-brands-wrapper ul,
+.footer-brands-wrapper li {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.footer-brands-wrapper ul::before,
+.footer-brands-wrapper li::marker,
+.footer-brands-wrapper li::before {
+  content: none !important;
+  display: none !important;
 }
 
 .brand-placeholder {

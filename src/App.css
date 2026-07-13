@@ -42,7 +42,7 @@ html {
 }
 
 .floating-btn:hover {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 

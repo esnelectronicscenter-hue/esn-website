@@ -6,7 +6,10 @@ const brandLogos = [
   { node: <span className="brand-placeholder">UNV</span>, title: "UNV" },
   { node: <span className="brand-placeholder">KOCOM</span>, title: "KOCOM" },
   { node: <span className="brand-placeholder">Hikvision</span>, title: "Hikvision" },
-  { node: <span className="brand-placeholder">TP-Link</span>, title: "TP-Link" },
+  { node: <span className="brand-placeholder">Welion</span>, title: "Welion" },
+  { node: <span className="brand-placeholder">Varta</span>, title: "Varta" },
+  { node: <span className="brand-placeholder">L-Frank</span>, title: "L-Frank" },
+  { node: <span className="brand-placeholder">Boker</span>, title: "Boker" },
 ];
 
 function Footer() {
@@ -21,8 +24,7 @@ function Footer() {
           gap={80}
           hoverSpeed={10}
           scaleOnHover={true}
-          fadeOut={true}
-          fadeOutColor="transparent"
+          fadeOut={false} /* 👈 تم تعطيل التلاشي هنا لنستخدم الـ CSS Mask بدلاً منه */
         />
       </div>
 
