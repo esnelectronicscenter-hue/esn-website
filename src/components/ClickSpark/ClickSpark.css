@@ -1,0 +1,39 @@
+.spark-container {
+  position: fixed;
+  pointer-events: none; /* لمنع التأثير من إعاقة الضغط على الأزرار */
+  z-index: 9999; /* ليكون دائماً فوق كل شيء */
+  transform: translate(-50%, -50%);
+}
+
+.spark-line {
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: #af2025; /* لون الشرر مطابق للون الموقع */
+  opacity: 0;
+  transform-origin: center top;
+  animation: spark-explode 0.5s ease-out forwards;
+}
+
+/* توزيع الشرر في 8 اتجاهات دائرية */
+.line-0 { --angle: 0deg; }
+.line-1 { --angle: 45deg; }
+.line-2 { --angle: 90deg; }
+.line-3 { --angle: 135deg; }
+.line-4 { --angle: 180deg; }
+.line-5 { --angle: 225deg; }
+.line-6 { --angle: 270deg; }
+.line-7 { --angle: 315deg; }
+
+/* حركة الانفجار والتلاشي */
+@keyframes spark-explode {
+  0% {
+    transform: rotate(var(--angle)) translateY(5px) scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--angle)) translateY(35px) scaleY(0);
+    opacity: 0;
+  }
+}

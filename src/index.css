@@ -1,0 +1,30 @@
+/* استيراد خط Cairo من جوجل */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;800&display=swap');
+
+/* إعدادات عامة لتنظيف الصفحة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* تطبيق خط Cairo كخط أساسي لجميع العناصر في الموقع */
+  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  
+  /* خلفية الموقع الأساسية */
+  background: linear-gradient(135deg, #af2025 0%, #5c1013 50%, #af2025 100%);
+  background-size: 200% 200%;
+  animation: bgAnimation 10s ease infinite; 
+  
+  color: white;
+  min-height: 100vh;
+  direction: ltr; /* الحفاظ على اتجاه الهيدر الأساسي */
+}
+
+/* حركة الخلفية (الأنيميشن) */
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

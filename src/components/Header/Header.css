@@ -1,0 +1,109 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 24px;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  width: 150px;
+  height: 50px;
+}
+
+.logo-img {
+  align-items: center;
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-container:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-btn {
+  display: none;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .logo-container {
+    width: 120px;
+    height: 50px;
+    padding: 5px 15px;
+    order: 2;
+  }
+  .logo-img {
+    height: 30px;
+  }
+  .menu-btn {
+    display: flex;
+    order: 1;
+    width: 50px;
+    height: 50px;
+  }
+  .search-block { order: 3; }
+  .actions-block { order: 4; }
+}
+
+@media (max-width: 540px) {
+  .main-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .logo-container {
+    width: 100px;
+    height: 45px;
+    padding: 5px 12px;
+    order: 1;
+    flex-shrink: 0;
+  }
+  .logo-img {
+    height: 28px;
+  }
+  .menu-btn {
+    order: 2;
+    width: 45px;
+    height: 45px;
+  }
+  .actions-block { order: 3; }
+  .search-block { order: 4; }
+}
