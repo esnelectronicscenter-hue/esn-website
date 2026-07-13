@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* تطبيق خط Cairo كخط أساسي لجميع العناصر في الموقع */
   font-family: 'Cairo', system-ui, -apple-system, sans-serif;

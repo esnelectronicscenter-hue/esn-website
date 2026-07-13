@@ -1,5 +1,5 @@
 .glass-footer {
-  margin-top: 100px;
+  margin-top: 50px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
@@ -7,6 +7,9 @@
   direction: rtl;
   border-radius: 40px;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+  width: 95%; /* بياخد 95% من الشاشة عشان يترك مسافة صغيرة من الجوانب */
+  max-width: 1800px; /* أقصى عرض عشان ما يمط كتير بالشاشات العملاقة */
+  margin: 50px auto 20px auto; /* auto من اليمين واليسار هي اللي بتوسطه بالنص */
 }
 
 .footer-brands-wrapper {
@@ -15,8 +18,8 @@
   opacity: 0.5;
   overflow: hidden;
   direction: ltr;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 50%, black 90%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 50%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 50%, black 50%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 50%, black 50%, transparent);
 }
 
 /* 👈 كود لإخفاء الدوائر (النقاط) الخاصة بالقوائم داخل شريط الماركات */

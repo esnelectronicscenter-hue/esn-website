@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import SearchBar from '../SearchBar/SearchBar';
 import Actions from '../Actions/Actions';
+import UserActions from '../UserActions/UserActions';
 import myLogo from '../../assets/logo.png';
 import './Header.css';
 
@@ -11,9 +13,9 @@ function Header() {
   return (
     <header className="main-header">
       <div className="logo-container">
-        <a href="../">
+        <Link to="/">
           <img src={myLogo} alt="ESN Center Logo" className="logo-img" />
-        </a>
+        </Link>
       </div>
 
       <button
@@ -30,6 +32,7 @@ function Header() {
       <Navbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <SearchBar />
       <Actions />
+      <UserActions />
     </header>
   );
 }

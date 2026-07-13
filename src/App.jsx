@@ -1,6 +1,7 @@
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ClickSpark from './components/ClickSpark/ClickSpark';
+import Hero from './components/Hero/Hero';
 import './App.css';
 
 function App() {
@@ -14,12 +15,7 @@ function App() {
       
       <Header />
 
-      <main className="main-content">
-        <section id="home">
-          <h1>مرحباً بك في متجرنا الجديد!</h1>
-          <p>التأثير الزجاجي يعمل بشكل ممتاز فوق الخلفيات الملونة أو الصور.</p>
-        </section>
-      </main>
+      <Hero />
 
       <Footer />
 

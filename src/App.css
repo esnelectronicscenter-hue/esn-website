@@ -2,8 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.app-container {
-  padding: 20px 40px;
+* {
+  content-align: center;  
 }
 
 .main-content {

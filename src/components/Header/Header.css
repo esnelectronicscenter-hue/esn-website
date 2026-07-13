@@ -1,4 +1,6 @@
 .main-header {
+  padding-top: 30px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +11,8 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   padding: 8px 24px;
   border-radius: 9999px;
   display: flex;

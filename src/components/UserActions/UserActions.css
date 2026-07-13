@@ -1,0 +1,64 @@
+/* تنسيق الدائرة الزجاجية للأيقونة الواحدة */
+.actions-block.single-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* جعل العرض دائريًا تقريبًا للأيقونة */
+  height: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0; /* لا حاجة للحشو هنا */
+  border-radius: 50%; /* شكل دائري */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* تنسيق الزر والأيقونة */
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* تأثير التحويم */
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1); /* تأثير تحويم بسيط */
+}
+
+/* الأيقونة المحددة لتسجيل الدخول */
+.login-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* التجاوب مع الشاشات (Responsive) */
+@media (max-width: 768px) {
+  .actions-block.single-mode {
+    width: 45px;
+    height: 45px;
+  }
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 540px) {
+  .actions-block.single-mode {
+    width: 40px;
+    height: 40px;
+  }
+  .icon-btn {
+    width: 35px;
+    height: 35px;
+  }
+}

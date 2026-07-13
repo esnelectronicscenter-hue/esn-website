@@ -1,0 +1,49 @@
+.glare-hover {
+  width: var(--gh-width);
+  height: var(--gh-height);
+  background: var(--gh-bg);
+  border-radius: var(--gh-br);
+  
+  /* 1. مسحنا كود الإطار من هون عشان الزر ياخد الـ border-top تبع الزجاج براحته */
+  
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.glare-hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--gh-angle),
+    hsla(0, 0%, 0%, 0) 60%,
+    var(--gh-rgba) 70%,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0) 100%
+  );
+  background-size:
+    var(--gh-size) var(--gh-size),
+    100% 100%;
+  background-repeat: no-repeat;
+  
+  /* التعديل الأول: رفعنا الوقت الإجمالي لـ 6 ثواني */
+  animation: autoGlare 4s infinite linear; 
+}
+
+@keyframes autoGlare {
+  0% {
+    /* بداية اللمعان من خارج الزر */
+    background-position: -100% -100%, 0 0;
+  }
+  40% {
+    /* التعديل الثاني: غيرنا 25% إلى 40% */
+    /* هذا يعني أن اللمعة ستستغرق حوالي ثانيتين ونصف لتعبر الزر ببطء ونعومة */
+    background-position: 200% 200%, 0 0;
+  }
+  100% {
+    /* باقي الوقت تنتظر اللمعة بصمت قبل إعادة الحركة */
+    background-position: 200% 200%, 0 0;
+  }
+}
