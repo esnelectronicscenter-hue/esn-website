@@ -14,7 +14,8 @@ const brandLogos = [
 
 function Footer() {
   return (
-    <footer className="glass-footer">
+    /* أضفنا id="about" هنا لزر من نحن */
+    <footer className="glass-footer" id="about">
       <div className="footer-brands-wrapper">
         <LogoLoop
           logos={brandLogos}
@@ -24,12 +25,12 @@ function Footer() {
           gap={80}
           hoverSpeed={10}
           scaleOnHover={true}
-          fadeOut={false} /* 👈 تم تعطيل التلاشي هنا لنستخدم الـ CSS Mask بدلاً منه */
+          fadeOut={false}
         />
       </div>
 
       <div className="footer-content">
-        {/* العمود الأول: الخريطة فقط بعد إزالة اللوجو */}
+        {/* العمود الأول: الخريطة */}
         <div className="footer-col about-col">
           <div className="contact-info">
             <div className="map-container">
@@ -46,7 +47,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* العمود الثاني: الجوال والبريد بدون أيقونات */}
+        {/* العمود الثاني: الجوال والبريد (صلحنا المسافة الزايدة في الـ ID هنا) */}
         <div className="footer-col" id="contact">
           <h4>تواصل معنا</h4>
           <ul>

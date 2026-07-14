@@ -2,6 +2,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ClickSpark from './components/ClickSpark/ClickSpark';
 import Hero from './components/Hero/Hero';
+import Products from './components/Products/Products';
 import './App.css';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
       <Header />
 
       <Hero />
+
+      <Products />
 
       <Footer />
 
